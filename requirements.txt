@@ -1,8 +1,2 @@
-branca==0.3.1
 streamlit==0.72.0
 pandas==0.25.2
-folium==0.10.1
-geopandas==0.8.0
-geopy==1.21.0
-scipy==1.4.1
-requests==2.22.0
