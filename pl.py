@@ -1,11 +1,12 @@
 import pandas as pd
 import streamlit as st
 
-# @st.cache
-# def get_az_xlsx() -> pd.DataFrame:
-#     file = 'Redfin_Zip_Realtor_CA_2022-10.csv'
-#     return(pd.read_csv(file))
-# df = get_az_xlsx()
+#Full Data Caching
+url = "https://redfin-public-data.s3.us-west-2.amazonaws.com/redfin_market_tracker/zip_code_market_tracker.tsv000.gz"
+@st.cache
+def get_data() -> pd.DataFrame:
+    return pd.read_csv(url, compression='gzip', sep='\t')
+df = get_data()
 
 uploaded_file = st.file_uploader('Choose a file')
 if uploaded_file is not None:
