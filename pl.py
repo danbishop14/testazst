@@ -12,7 +12,7 @@ import polars as pl
 # df = get_data()
 
 
-df = pd.read_csv(r'C:\Users\Dan\Desktop\Coding\Datasets\Redfin_Data\Redfin_Zip_Realtor_CA_2022-10.csv')
+df = pd.read_csv(r'Redfin_Zip_Realtor_CA_2022-10.csv')
 st.write(df)
 uploaded_file = st.file_uploader('Choose a file')
 if uploaded_file is not None:
